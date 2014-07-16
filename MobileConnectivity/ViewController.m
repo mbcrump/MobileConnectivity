@@ -113,9 +113,10 @@
 -(VideoGame*) generateNewProduct
 {
     VideoGame* videogame = [[VideoGame alloc] init];
-    int rnd = arc4random() % 1000;
+    int rnd = arc4random() % 100;
+    int rnd1 = arc4random() % 1000;
     videogame.gameId = [[NSString alloc] initWithFormat:@"#%i", rnd ];
-    videogame.gameTitle = [[NSString alloc] initWithFormat:@"Halo #%i", rnd ];
+    videogame.gameTitle = [[NSString alloc] initWithFormat:@"Halo #%i", rnd1 ];
     
     return videogame;
 }
