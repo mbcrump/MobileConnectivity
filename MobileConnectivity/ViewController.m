@@ -150,9 +150,6 @@
 
 - (IBAction)viewTheItems:(id)sender {
     
-    //VideoGame* pd = [self generateNewProduct];
-    
-    //[_theContext insertObject:pd];
 
     [_theContext syncChangesAsync:dispatch_get_main_queue()
                 completionHandler: ^(BOOL result, NSError *error) {
