@@ -87,14 +87,12 @@
 {
     [super viewDidLoad];
     
-    //1: Create Everlive client instance
-    self.apiKey = @"4VuHzPclrrzPu5XI"; //put here the ApiKey of the application that you use for backend
+    self.apiKey = @"4VuHzPclrrzPu5XI";
     
     TKEverliveClient* everliveClient = [TKEverliveClient clientWithApiKey:self.apiKey
                                                               accessToken:self.accessToken //see property getter
                                                            serviceVersion:@1];
     
-    //2: init the policy
     TKDataSyncReachabilityOptions options = TKSyncIn3GNetwork | TKSyncInWIFINetwork;
     TKDataSyncPolicy* thePolicy = [[TKDataSyncPolicy alloc] initForSyncOnDemandWithReachabilityOptions:options
                                                                                 conflictResolutionType:TKPreferLocalInstance
